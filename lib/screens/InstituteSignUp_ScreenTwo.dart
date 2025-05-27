@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tech_linker/Institute_Dashboard.dart';
+import 'package:tech_linker/screens/Institute_Dashboard.dart';
 import 'package:tech_linker/widget/Container_Widget.dart';
 import 'package:tech_linker/widget/CustomElevated_Button.dart';
 import 'package:tech_linker/widget/TextField_widget.dart';

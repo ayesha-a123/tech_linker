@@ -1,11 +1,11 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:tech_linker/AdminSetting_Screen.dart';
-import 'package:tech_linker/Manage%20Students.dart';
-import 'package:tech_linker/ManageInstitute.dart';
-import 'package:tech_linker/ManageInterships.dart';
-import 'package:tech_linker/SignIn_screen.dart';
-import 'package:tech_linker/Supports_feedbackAdmin.dart';
+import 'package:tech_linker/screens/AdminSetting_Screen.dart';
+import 'package:tech_linker/screens/Manage%20Students.dart';
+import 'package:tech_linker/screens/ManageInstitute.dart';
+import 'package:tech_linker/screens/ManageInterships.dart';
+import 'package:tech_linker/screens/SignIn_screen.dart';
+import 'package:tech_linker/screens/Supports_feedbackAdmin.dart';
 import 'package:tech_linker/widget/Card_Widget.dart';
 import 'package:tech_linker/widget/list_tiles.dart';
 

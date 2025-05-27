@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tech_linker/Splash_ScreenTwo.dart';
+import 'package:tech_linker/screens/Splash_ScreenTwo.dart';
 import 'package:tech_linker/widget/coustomElevated_Button.dart';
 class ScreenOne extends StatelessWidget {
   const ScreenOne({super.key});

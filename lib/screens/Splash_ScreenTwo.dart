@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tech_linker/Splash_ScreenThree.dart';
+import 'package:tech_linker/screens/Splash_ScreenThree.dart';
 import 'package:tech_linker/widget/coustomElevated_Button.dart';
 
 class ScreenTwo extends StatelessWidget {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tech_linker/StudentDetailScreen.dart';
+import 'package:tech_linker/screens/StudentDetailScreen.dart';
 
 class ManageStudentsScreen extends StatefulWidget {
   const ManageStudentsScreen({super.key});

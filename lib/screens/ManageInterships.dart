@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tech_linker/Internship_detailScreeen.dart';
+import 'package:tech_linker/screens/Internship_detailScreeen.dart';
 import 'package:tech_linker/widget/intern_Card.dart';
 
 class Manageinterships extends StatefulWidget {

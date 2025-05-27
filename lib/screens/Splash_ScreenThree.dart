@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tech_linker/SignIn_screen.dart';
+import 'package:tech_linker/screens/SignIn_screen.dart';
 // import 'package:tech_linker/SignIn_screen.dart';
 
 class ScreenThree extends StatelessWidget {

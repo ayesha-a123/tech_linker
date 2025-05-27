@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tech_linker/Student_dashboard.dart';
-import 'package:tech_linker/home_screen.dart';
+import 'package:tech_linker/screens/Student_dashboard.dart';
+import 'package:tech_linker/screens/home_screen.dart';
 import 'package:tech_linker/widget/CustomElevated_Button.dart';
 import 'package:tech_linker/widget/TextField_widget.dart';
 
