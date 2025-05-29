@@ -121,7 +121,7 @@ class _StudentdetailscreenState extends State<Studentdetailscreen> {
 
 
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding:EdgeInsets.all(16.0),
         child: Column(
           children: [
             TextFieldLabel(controller: _nameController, readOnly: true, labelText: 'Name'),

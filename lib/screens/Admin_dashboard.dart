@@ -1,5 +1,6 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:tech_linker/screens/AboutUs_SettingScreen.dart';
 import 'package:tech_linker/screens/AdminSetting_Screen.dart';
 import 'package:tech_linker/screens/Manage%20Students.dart';
 import 'package:tech_linker/screens/ManageInstitute.dart';
@@ -143,7 +144,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
                 CustomListTiles(icon: Icons.bar_chart, title: 'AnalyticsAndReports',color: Colors.white, onTap: () {Navigator.of(context).push(MaterialPageRoute(builder: (context)=>AdminDashboard()));}),
                 CustomListTiles(icon: Icons.settings, title: 'Settings',color: Colors.white, onTap: () {Navigator.of(context).push(MaterialPageRoute(builder: (context)=>AdminsettingScreen()));}),
                 CustomListTiles(icon: Icons.support_agent, title: 'SupportAndFeedback',color: Colors.white, onTap: (){Navigator.of(context).push(MaterialPageRoute(builder: (context)=>SupportAndFeedbackScreen()));}),
-                CustomListTiles(icon: Icons.info_outline, title: 'AboutUs',color: Colors.white, onTap: () {}),
+                CustomListTiles(icon: Icons.info_outline, title: 'AboutUs',color: Colors.white, onTap: () {Navigator.of(context).push(MaterialPageRoute(builder: (context)=>AboutusSettingscreen()));}),
                 CustomListTiles(icon: Icons.logout, title: 'SignOut',color: Colors.white, onTap: () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) =>  SigninScreen()))),
               ],
             )
@@ -186,9 +187,9 @@ class _AdminDashboardState extends State<AdminDashboard> {
                 ),
               ],
             ),
-            SizedBox(height: 30),
-
-            // Swipeable Chart Viewer
+            SizedBox(height: 70,),
+            Divider(thickness: 3,color: Colors.black26,),
+            SizedBox(height: 70),
             SizedBox(
               height: 400,
               child: PageView(

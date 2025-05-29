@@ -21,11 +21,11 @@ class ScreenThree extends StatelessWidget {
         child: Scaffold(
           backgroundColor: Colors.transparent,
           body: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24.0),
+            padding: EdgeInsets.symmetric(horizontal: 24.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const SizedBox(height: 60),
+               SizedBox(height: 60),
 
                 // Heading
                 Text(
@@ -40,7 +40,7 @@ class ScreenThree extends StatelessWidget {
                   ),
                 ),
 
-                const SizedBox(height: 50),
+               SizedBox(height: 50),
 
                 // Centered Image
                 Center(
@@ -51,10 +51,7 @@ class ScreenThree extends StatelessWidget {
                     fit: BoxFit.contain,
                   ),
                 ),
-
-                const SizedBox(height: 40),
-
-                // Subtext
+                SizedBox(height: 40),
                 Text(
                   'Connect with mentors\n& like-minded learners',
                   textAlign: TextAlign.center,
