@@ -116,18 +116,18 @@ class _AdminDashboardState extends State<AdminDashboard> {
       key: _scaffoldKey,
       backgroundColor: Colors.transparent,
       appBar: AppBar(
-        backgroundColor: const Color(0XFF6750A4),
-        title: const Text('Admin Dashboard', style: TextStyle(color: Colors.white)),
+        backgroundColor: Color(0XFF6750A4),
+        title: Text('Admin Dashboard', style: TextStyle(color: Colors.white)),
         leading: IconButton(
-          icon: const Icon(Icons.menu, color: Colors.white),
+          icon:Icon(Icons.menu, color: Colors.white),
           onPressed: _handleDrawer,
         ),
       ),
       drawer: Drawer(
-        backgroundColor: const Color(0xFF2A0845),
+        backgroundColor:Color(0xFF2A0845),
         child: ListView(
           children: [
-            const UserAccountsDrawerHeader(
+           UserAccountsDrawerHeader(
               currentAccountPicture: CircleAvatar(
                 child: Icon(Icons.admin_panel_settings, color: Colors.black, size: 70),
               ),
@@ -140,7 +140,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
                 CustomListTiles(icon: Icons.work_outline, title: 'Manage Internships',color: Colors.white, onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => Manageinterships()))),
                 CustomListTiles(icon: Icons.school, title: 'Manage Students',color: Colors.white, onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => ManageStudentsScreen()))),
                 CustomListTiles(icon: Icons.apartment, title: 'ManageInstitutes',color: Colors.white, onTap: ()  {Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Manageinstitute()));}),
-                CustomListTiles(icon: Icons.bar_chart, title: 'AnalyticsAndReports',color: Colors.white, onTap: () {}),
+                CustomListTiles(icon: Icons.bar_chart, title: 'AnalyticsAndReports',color: Colors.white, onTap: () {Navigator.of(context).push(MaterialPageRoute(builder: (context)=>AdminDashboard()));}),
                 CustomListTiles(icon: Icons.settings, title: 'Settings',color: Colors.white, onTap: () {Navigator.of(context).push(MaterialPageRoute(builder: (context)=>AdminsettingScreen()));}),
                 CustomListTiles(icon: Icons.support_agent, title: 'SupportAndFeedback',color: Colors.white, onTap: (){Navigator.of(context).push(MaterialPageRoute(builder: (context)=>SupportAndFeedbackScreen()));}),
                 CustomListTiles(icon: Icons.info_outline, title: 'AboutUs',color: Colors.white, onTap: () {}),
@@ -151,20 +151,20 @@ class _AdminDashboardState extends State<AdminDashboard> {
         ),
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(8),
+        padding:EdgeInsets.all(8),
         child: Column(
           children: [
             Row(
               children: [
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding:EdgeInsets.all(8.0),
                     child: CustomCard(title: 'ManageInternships', icon: Icons.work_outline_rounded, subTitle: 'Total post:12', color: const Color(0xFFC95792)),
                   ),
                 ),
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding:  EdgeInsets.all(8.0),
                     child: CustomCard(title: 'ManageInstitutes', icon: Icons.apartment, subTitle: 'Total Institutes: 5', color: const Color(0xFF7E5CAD)),
                   ),
                 ),
@@ -174,7 +174,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
               children: [
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: EdgeInsets.all(8.0),
                     child: CustomCard(title: 'ManageStudents', icon: Icons.school, subTitle: 'Total post:12', color: const Color(0xFF48A6A7)),
                   ),
                 ),
@@ -186,7 +186,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
                 ),
               ],
             ),
-            const SizedBox(height: 30),
+            SizedBox(height: 30),
 
             // Swipeable Chart Viewer
             SizedBox(
@@ -199,8 +199,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
                 ],
               ),
             ),
-
-            const SizedBox(height: 20),
+            SizedBox(height: 20),
           ],
         ),
       ),
