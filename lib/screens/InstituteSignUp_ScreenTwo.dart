@@ -22,18 +22,17 @@ class _InstitutesignupScreentwoState extends State<InstitutesignupScreentwo> {
   List<String>CityType =['Lahore','Gujranwala','Islamabad','Gujrat','GujarKhan','Sadar','Faisalabaad','RawalPindi'];
   @override
   Widget build(BuildContext context) {
-    return  SafeArea(
+    return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        body:Column(
-            children: [
-              SizedBox(
-                height:60,
-              ),
-              Text('SignUp',style: TextStyle(fontSize: 50,color: Colors.white),),
-              Padding(
-                padding: const EdgeInsets.all(20),
-                child: Expanded(
+        body:ListView(
+              children: [
+                SizedBox(
+                  height:60,
+                ),
+                Center(child: Text('SignUp',style: TextStyle(fontSize: 50,color: Colors.white),)),
+                Padding(
+                  padding: const EdgeInsets.all(20),
                   child: ContainerWidget(child: SingleChildScrollView(
                     child: Column(
                       children: [
@@ -69,7 +68,7 @@ class _InstitutesignupScreentwoState extends State<InstitutesignupScreentwo> {
                                 selectedCity =value;
                               });
                               }
-                                
+
                           ),
                         ),
                         Padding(
@@ -106,7 +105,7 @@ class _InstitutesignupScreentwoState extends State<InstitutesignupScreentwo> {
                                 addressError='MustRequired';
                               });
                             }
-                            if(phoneError==null && contactError==null && addressCtrl==null){
+                            if(phoneError==null && contactError==null && addressError==null){
                               setState(() {
                                 Navigator.of(context).push(MaterialPageRoute(builder: (context)=>InstituteDashboard()));
                               });
@@ -118,10 +117,10 @@ class _InstitutesignupScreentwoState extends State<InstitutesignupScreentwo> {
                     ),
                   )),
                 ),
-              ),
-            ]
+              ]
+          ),
         ),
-      ),
+
     );
   }
 }

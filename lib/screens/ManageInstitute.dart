@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tech_linker/screens/InstituteDetailScreeen.dart';
-import 'package:tech_linker/widget/TextField_widget.dart';
 
 class Manageinstitute extends StatefulWidget {
   const Manageinstitute({super.key});
