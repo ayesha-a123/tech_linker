@@ -30,6 +30,8 @@ class _AdminsettingScreenState extends State<AdminsettingScreen> {
         child: ListView(
             children:[
               Text('🔒Account Setting',style:myStyle),
+
+              CustomListTiles(icon: Icons.edit, title: 'Edit profile', onTap: (){}, color:Colors.black),
               CustomListTiles(icon: Icons.email, title: 'Change Email', onTap: (){}, color:Colors.black),
               CustomListTiles(icon: Icons.key, title: 'Change Security key', onTap: (){}, color:Colors.black),
               CustomListTiles(icon: Icons.lock, title: 'Change Password', onTap: (){}, color:Colors.black),
