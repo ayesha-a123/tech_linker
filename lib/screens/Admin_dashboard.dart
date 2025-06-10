@@ -15,6 +15,8 @@ class AdminDashboard extends StatefulWidget {
   State<AdminDashboard> createState() => _AdminDashboardState();
 }
 class _AdminDashboardState extends State<AdminDashboard> {
+  String adminName ='AdminName';
+  String adminEmail ='Admin@gmail.com';
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   bool _isDrawerOpen = false;
 
@@ -202,5 +204,41 @@ class _AdminDashboardState extends State<AdminDashboard> {
         ),
       ),
     );
+  }
+  void show_editDialogue(){
+    final nameController =TextEditingController(text: adminName);
+    final emailController =TextEditingController(text: adminEmail);
+
+    showDialog(
+        context: context,
+        builder: (context)=>AlertDialog(
+          title: Text('Edit Profile'),
+          content: Column(
+            children: [
+              TextField(
+                controller: nameController,
+                decoration: InputDecoration(labelText: 'Name'),
+              ),
+              TextField(
+                controller: emailController,
+                decoration: InputDecoration(labelText:'Email' ),
+              ),
+              
+            ],
+          ),
+          actions: [
+            TextButton(
+              child: Text('Cancel'),
+                onPressed:()=>Navigator.of(context).pop(),
+                ),
+            ElevatedButton(onPressed: (){
+              setState(() {
+                adminName =nameController.text;
+                adminEmail=emailController.text;
+              });
+              Navigator.of(context).pop();
+            }, child: Text('Save'))
+          ],
+        ));
   }
 }
