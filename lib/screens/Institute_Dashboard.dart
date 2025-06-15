@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tech_linker/screens/InstituteInternships.dart';
 import 'package:tech_linker/widget/list_tiles.dart';
 // import 'package:image_picker/image_picker.dart';
 // import 'dart:io';
@@ -56,11 +57,11 @@ class _InstituteDashboardState extends State<InstituteDashboard> {
               ),
               CustomListTiles(icon: Icons.dashboard,
                   title: 'Dashboard',
-                  onTap: () {},
+                  onTap: () {Navigator.of(context).push(MaterialPageRoute(builder: (context)=>InstituteDashboard()));},
                   color: Colors.white),
               CustomListTiles(icon: Icons.work_outline,
                   title: 'Internships',
-                  onTap: () {},
+                  onTap: () {Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Instituteinternships()));},
                   color: Colors.white),
               CustomListTiles(icon: Icons.assignment_outlined,
                   title: 'Applications Received',
