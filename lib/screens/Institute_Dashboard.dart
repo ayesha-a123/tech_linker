@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tech_linker/screens/InstituteInternships.dart';
+import 'package:tech_linker/screens/applicationReceived_institute.dart';
 import 'package:tech_linker/widget/list_tiles.dart';
 // import 'package:image_picker/image_picker.dart';
 // import 'dart:io';
@@ -65,7 +66,7 @@ class _InstituteDashboardState extends State<InstituteDashboard> {
                   color: Colors.white),
               CustomListTiles(icon: Icons.assignment_outlined,
                   title: 'Applications Received',
-                  onTap: () {},
+                  onTap: () {Navigator.of(context).push(MaterialPageRoute(builder: (context)=>ApplicationsReceivedScreen()));},
                   color: Colors.white),
               CustomListTiles(icon: Icons.how_to_reg,
                   title: 'ShortListed Candidates',
