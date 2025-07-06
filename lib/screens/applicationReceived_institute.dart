@@ -14,7 +14,7 @@ class _ApplicationsReceivedScreenState
     {
       'studentName': 'Ali Raza',
       'internshipTitle': 'Flutter Developer',
-      'status': 'Pending',
+      'status': 'ShortListed',
     },
     {
       'studentName': 'Sara Khan',
@@ -24,7 +24,7 @@ class _ApplicationsReceivedScreenState
     {
       'studentName': 'Ahmed Khan',
       'internshipTitle': 'Backend Developer',
-      'status': 'Accepted',
+      'status': 'ShortListed',
     },
     {
       'studentName': 'Ahsan Khan',
@@ -34,7 +34,7 @@ class _ApplicationsReceivedScreenState
     {
       'studentName': 'AliKhan',
       'internshipTitle': 'Backend Developer',
-      'status': 'Rejected',
+      'status': 'ShortListed',
     },
     {
       'studentName': 'Daniyal Khan',
@@ -49,7 +49,7 @@ class _ApplicationsReceivedScreenState
     {
       'studentName': 'Eman Khan',
       'internshipTitle': 'Backend Developer',
-      'status': 'Rejected',
+      'status': 'ShortListed',
     },
     {
       'studentName': 'AbuBakkar Khan',
@@ -59,7 +59,7 @@ class _ApplicationsReceivedScreenState
     {
       'studentName': 'Taniya',
       'internshipTitle': 'Backend Developer',
-      'status': 'Rejected',
+      'status': 'ShortListed',
     },
     {
       'studentName': 'ALiza',
@@ -74,7 +74,7 @@ class _ApplicationsReceivedScreenState
     {
       'studentName': 'Tahira',
       'internshipTitle': 'Backend Developer',
-      'status': 'Accepted',
+      'status': 'ShortListed',
     },
     {
       'studentName': 'Minahil',
@@ -89,7 +89,7 @@ class _ApplicationsReceivedScreenState
     {
       'studentName': 'Haseeb',
       'internshipTitle': 'Backend Developer',
-      'status': 'Rejected',
+      'status': 'ShortListed',
     },
 
   ];
@@ -102,7 +102,7 @@ class _ApplicationsReceivedScreenState
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3, // All, Accepted, Rejected
+      length: 4, // All, Accepted, Rejected
       child: Scaffold(
         appBar: AppBar(
           title: Text("Applications Received",style: TextStyle(color: Colors.white),),
@@ -115,6 +115,7 @@ class _ApplicationsReceivedScreenState
               Tab(text: 'All'),
               Tab(text: 'Accepted'),
               Tab(text: 'Rejected'),
+              Tab(text: 'ShortListed'),
             ],
           ),
         ),
@@ -123,6 +124,7 @@ class _ApplicationsReceivedScreenState
             buildApplicationsList('All'),
             buildApplicationsList('Accepted'),
             buildApplicationsList('Rejected'),
+            buildApplicationsList('ShortListed'),
           ],
         ),
       ),
@@ -130,11 +132,16 @@ class _ApplicationsReceivedScreenState
   }
 
   Widget buildApplicationsList(String statusFilter) {
-    List<Map<String, String>> filteredList = statusFilter == 'All'
-        ? allApplications
-        : allApplications
-        .where((app) => app['status'] == statusFilter)
-        .toList();
+    List<Map<String, String>> filteredList;
+    if(statusFilter=='All'){
+      filteredList = allApplications;
+    } else{
+      filteredList=allApplications.where((app)=> app['status']== statusFilter).toList();
+    }
+    if(filteredList.isEmpty){
+      return Center(child: Text('No Application with Status "$statusFilter".',style: TextStyle(color: Colors.grey,fontSize: 16),));
+    }
+
 
     return ListView.builder(
       itemCount: filteredList.length,
@@ -182,6 +189,15 @@ class _ApplicationsReceivedScreenState
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.red),
                         child: Text('Reject'),
+                      ),
+                    SizedBox(width: 7,),
+                    if (app['status'] != 'ShortListed')
+                      ElevatedButton(
+                        onPressed: () =>
+                            updateStatus(originalIndex, 'ShortListed'),
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.blue),
+                        child: Text('ShortListed'),
                       ),
                   ],
                 )
